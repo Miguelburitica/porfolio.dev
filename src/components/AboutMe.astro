@@ -1,4 +1,8 @@
-<section class="flex flex-col md:flex-row gap-8 justify-center items-center">
+---
+ const personalImageAlt = "Miguel Ángel picture"
+---
+
+<article class="flex flex-col md:flex-row gap-8 justify-center items-center">
   <div
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-400 [&>p>strong]:font-semibold text-pretty order-2 md:order-1"
   >
@@ -25,8 +29,10 @@
       acceso a contenido de calidad.
     </p>
   </div>
-  <img src="/me.png" class="rounded-full size-64 order-1 md:order-2" />
-</section>
+
+  <img src="/me.png" class="rounded-full size-64 order-1 md:order-2" alt={personalImageAlt}/>
+
+</article>
 
 <!-- FRASES PROHIBIDAS EN VUESTRO PORTFOLIO
 
