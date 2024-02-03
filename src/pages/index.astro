@@ -2,17 +2,18 @@
 import Layout from "@/layouts/Layout.astro"
 
 import AboutMe from "@/components/AboutMe.astro"
-import Badge from "@/components/Badge.astro"
 import Briefcase from "@/components/icons/Briefcase.astro"
 import CodeIcon from "@/components/icons/Code.astro"
 import Experience from "@/components/Experience.astro"
-import GitHubIcon from "@/components/icons/GitHub.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
 import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import SocialPill from "@/components/SocialPill.astro"
+import Badge from "@/components/Badge.astro"
+import LinkedInIcon from "@/components/icons/LinkedIn.astro"
+import GitHubIcon from "@/components/icons/GitHub.astro"
+import MailIcon from "@/components/icons/Mail.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
-import SocialPill from "@/components/SocialPill.astro"
+import Hero from "@/components/Hero.astro"
 ---
 
 <Layout
@@ -20,7 +21,7 @@ import SocialPill from "@/components/SocialPill.astro"
   description="Contrata a Miguel para crear tu aplicación web o móvil. Desarrollador Web enfocado en el Front End (tanto mobile con Flutter como web con Vue.js y Astro). Especializado en crear la mejor versión de la aplicación que necesitas."
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-32">
+    <SectionContainer class="py-16 md:py-36">
       <header class="flex flex-col sm:flex-row sm:items-center pb-6 lg:pb-10">
         <img
           class="rounded-xl size-16 mb-4 sm:mr-4"
@@ -72,13 +73,17 @@ import SocialPill from "@/components/SocialPill.astro"
           </SocialPill>
         </nav>
       </main>
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+        </slot>
+      </Hero>
     </SectionContainer>
-
+    <div class="space-y-24">
     <SectionContainer id="experiencia">
       <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
-        <Briefcase class="size-7" />
+        <Briefcase class="size-8" />
         Experiencia laboral
       </h2>
       <Experience />
@@ -86,7 +91,7 @@ import SocialPill from "@/components/SocialPill.astro"
 
     <SectionContainer id="proyectos">
       <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
         <CodeIcon class="size-7" />
         Proyectos
@@ -96,12 +101,13 @@ import SocialPill from "@/components/SocialPill.astro"
 
     <SectionContainer id="sobre-mi">
       <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
       >
-        <ProfileCheck class="size-7" />
+        <ProfileCheck class="size-8" />
         Sobre mi
       </h2>
       <AboutMe />
     </SectionContainer>
+  </div>
   </main>
 </Layout>

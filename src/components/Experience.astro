@@ -3,23 +3,25 @@ import ExperienceItem from "./ExperienceItem.astro"
 const EXPERIENCIE = [
   {
     date: "Actualmente...",
-    title: "Frontend Developer Vuejs - Alegra",
+    title: "Frontend Developer Vuejs",
+    company: "Alegra",
     description:
       "Encargado de mantener y desarrollar nuevas funcionalidades para el producto de contabilidad y facturación electrónica de Alegra.com. Desarrollo de componentes y librerías para el equipo de diseño. Mejora de un 30% en la entrega de software."
   },
   {
     date: "febrero 2024",
-    title: "Full Stack Engineer Junior − 1DOC3",
+    title: "Full Stack Engineer Junior",
+    company: "1DOC3",
     description:
       "Desde el 2022, me desempeñé como desarrollador Full Stack, 1DOC3 es una startup de salud que conecta profesionales de la salud con pacientes en tiempo real. Trabajé en el desarrollo de la plataforma web, la aplicación móvil y el backend de la aplicación."
   },
 ]
 ---
 
-<ol class="relative border-s border-gray-200 ml-3">
+<ol class="relative mt-16">
   {
     EXPERIENCIE.map((experiencie) => (
-      <li class="mb-10 ms-4">
+      <li class="">
         <ExperienceItem {...experiencie} />
       </li>
     ))
